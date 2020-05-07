@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Page</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="style.css" rel="stylesheet"/>
+    <link href="registration-page.style.client.css" rel="stylesheet"/>
+</head>
+<body>
+
+<div class="container">
+
+
+
+        <div class="row">
+    <h2 class="display-4" id="title_text">
+        Learning Reimagined. Join WhiteBoard.
+    </h2>
+        </div>
+
+    <div id="sign_up_form" class="col-lg">
+
+
+    <div class="row input-group input-group-lg" id="username">
+        <label for="username_input" class="lead">
+            Username
+            <input id="username_input" placeholder=" jsmith123" class="form-control" aria-label="Username">
+        </label>
+    </div>
+
+    <div class="row input-group input-group-lg" id="email_address">
+        <label for="email_address_input" class="lead">
+            Email Address
+            <input id="email_address_input" type="email" placeholder=" j.smith@example.com" class="form-control"
+                   aria-label="Email Address">
+        </label>
+    </div>
+
+    <div class="row input-group input-group-lg">
+        <label for="password" class="lead" title="Password must have 6 characters and at least one number">
+            Password
+            <input id="password" type="password" class="form-control" aria-label="Password">
+        </label>
+    </div>
+
+    <div class="row input-group input-group-lg">
+        <label for="password_confirm" class="lead" title="Password must be identical to the one typed above.">
+            Confirm Password
+            <input id="password_confirm" type="password" class="form-control" aria-label="Confirm Password">
+        </label>
+    </div>
+
+    <div>
+        <a href="profile_page/profile-page.template.client.html" class="btn btn-outline-dark btn-block">
+            Sign Up
+        </a>
+    </div>
+
+    <div>
+        <a href="login_page/login-page.template.client.html">Already have an account?</a>
+    </div>
+
+</div>
+</div>
+
+</body>
+</html>

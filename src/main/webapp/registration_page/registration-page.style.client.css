@@ -1,0 +1,16 @@
+#title_text {
+    text-align: center;
+}
+
+#sign_up_form {
+    align-items: center;
+    padding-top: 150px;
+}
+
+#username_input {
+    padding-right: 150px;
+}
+
+#email_address_input {
+    padding-right: 500px;
+}
