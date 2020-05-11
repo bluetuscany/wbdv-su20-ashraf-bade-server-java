@@ -1,4 +1,6 @@
-
+body {
+    background-color: #f5e5de;
+}
 
 #welcome_message {
     padding-top: 200px;

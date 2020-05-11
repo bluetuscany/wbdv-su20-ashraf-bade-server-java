@@ -4,64 +4,70 @@
     <meta charset="UTF-8">
     <title>Registration Page</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="style.css" rel="stylesheet"/>
     <link href="registration-page.style.client.css" rel="stylesheet"/>
+    <link href="../landing_page/style.css" rel="stylesheet"/>
 </head>
 <body>
 
 <div class="container">
 
+    <div id="navBar">
+        <nav class="navbar fixed-top navbar-dark bg-dark">
+            <a id="home_button" class="navbar-brand" href="../landing_page/index.html">WhiteBoard</a>
+            <a id="login_redirect" class="nav-item nav-link active wbdv-link wbdv-login"
+               href="../login_page/login-page.template.client.html">Login</a>
+        </nav>
+    </div>
 
-
-        <div class="row">
     <h2 class="display-4" id="title_text">
         Learning Reimagined. Join WhiteBoard.
     </h2>
+
+    <div id="sign_up_form">
+
+        <div class="form-group row">
+            <label for="uname" class="col-sm-2 col-form-label">Username</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control wbdv-field wbdv-username" id="uname" placeholder="jsmith123">
+            </div>
         </div>
 
-    <div id="sign_up_form" class="col-lg">
+        <div class="form-group row">
+            <label for="email" class="col-sm-2 col-form-label">Email Address</label>
+            <div class="col-sm-10">
+                <input type="email" class="form-control" id="email" placeholder="j.smith@example.com">
+            </div>
+        </div>
 
+        <div class="form-group row">
+            <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+            <div class="col-sm-10">
+                <input type="password" class="form-control wbdv-field wbdv-password" id="inputPassword"
+                       placeholder="Password">
+            </div>
+        </div>
 
-    <div class="row input-group input-group-lg" id="username">
-        <label for="username_input" class="lead">
-            Username
-            <input id="username_input" placeholder=" jsmith123" class="form-control" aria-label="Username">
-        </label>
+        <div class="form-group row">
+            <label for="confirmPass" class="col-sm-2 col-form-label">Confirm Password</label>
+            <div class="col-sm-10">
+                <input type="password" class="form-control wbdv-field wbdv-password-verify" id="confirmPass"
+                       placeholder="Password">
+            </div>
+        </div>
+
     </div>
 
-    <div class="row input-group input-group-lg" id="email_address">
-        <label for="email_address_input" class="lead">
-            Email Address
-            <input id="email_address_input" type="email" placeholder=" j.smith@example.com" class="form-control"
-                   aria-label="Email Address">
-        </label>
+    <div id="links">
+        <div>
+            <a href="../profile_page/profile-page.template.client.html"
+               class="btn btn-dark btn-block wbdv-button wbdv-register">
+                Sign Up
+            </a>
+        </div>
+
+
     </div>
 
-    <div class="row input-group input-group-lg">
-        <label for="password" class="lead" title="Password must have 6 characters and at least one number">
-            Password
-            <input id="password" type="password" class="form-control" aria-label="Password">
-        </label>
-    </div>
-
-    <div class="row input-group input-group-lg">
-        <label for="password_confirm" class="lead" title="Password must be identical to the one typed above.">
-            Confirm Password
-            <input id="password_confirm" type="password" class="form-control" aria-label="Confirm Password">
-        </label>
-    </div>
-
-    <div>
-        <a href="profile_page/profile-page.template.client.html" class="btn btn-outline-dark btn-block">
-            Sign Up
-        </a>
-    </div>
-
-    <div>
-        <a href="login_page/login-page.template.client.html">Already have an account?</a>
-    </div>
-
-</div>
 </div>
 
 </body>

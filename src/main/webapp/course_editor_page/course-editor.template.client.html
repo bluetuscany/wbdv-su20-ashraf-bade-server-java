@@ -3,11 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <title>Course Editor</title>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+          rel="stylesheet"/>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="style.css" rel="stylesheet"/>
     <link href="course-editor.style.client.css" rel="stylesheet"/>
+    <link href="../landing_page/style.css" rel="stylesheet"/>
 </head>
 <body>
+
+<div class="container">
+
+    <div class="row" id="navBar">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="../profile_page/profile-page.template.client.html">WhiteBoard</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="profile-page.template.client.html">My Profile <span
+                            class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="../course_list/course-list.template.client.html">My Courses</a>
+                    <a class="nav-item nav-link active" href="../course_editor_page/course-editor.template.client.html">Course
+                        Editor</a>
+                    <a id="logout" class="nav-item nav-link active"
+                       href="../landing_page/index.html">Logout</a>
+                </div>
+            </div>
+
+        </nav>
+    </div>
+
+    <div class="row col-12">
+
+        <nav class="navbar navbar-dark bg-dark">
+            <i class="fa fa-times wbdv-course-editor wbdv-close" style="color: white"></i>
+            <label class="navbar-brand wbdv-course-title">CS 1500 - Intro to WebDev</label>
+            <label class="navbar-text wbdv-lesson-tabs" style="color: white">Build</label>
+            <label class="navbar-text">Pages</label>
+            <label class="navbar-text">Theme</label>
+            <label class="navbar-text">Store</label>
+            <label class="navbar-text">Apps</label>
+            <label class="navbar-text">Settings</label>
+            <i class="fa fa-plus wbdv-lesson-add-btn" style="color: white; padding-left: 10px"></i>
+
+        </nav>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-3" style="padding-right: 15px">
+
+            <ul class="list-group-item bg-dark wbdv-module-list" style="padding-bottom: 30px">
+
+                <li class="list-group-item wbdv-module-item wbdv-module-item-title" style="background-color: #f5e5de">
+                    Module 1<i class="fa fa-times wbdv-module-item-delete-btn"
+                               style="padding-left: 75px"></i>
+                </li>
+                <li class="list-group-item" style="background-color: #f5e5de">Module 2<i class="fa fa-times"
+                                                                                         style="padding-left: 75px"></i>
+                </li>
+                <li class="list-group-item" style="background-color: #f5e5de">Module 3<i class="fa fa-times"
+                                                                                         style="padding-left: 75px"></i>
+                </li>
+                <li class="list-group-item" style="background-color: #f5e5de">Module 4<i class="fa fa-times"
+                                                                                         style="padding-left: 75px"></i>
+                </li>
+                <li class="list-group-item" style="background-color: #f5e5de">Module 5<i class="fa fa-times"
+                                                                                         style="padding-left: 75px"></i>
+                </li>
+                <li class="list-group-item" style="background-color: #f5e5de">Module 6<i class="fa fa-times"
+                                                                                         style="padding-left: 75px"></i>
+                </li>
+                <li class="list-group-item" style="background-color: #f5e5de">Module 7<i class="fa fa-times"
+                                                                                         style="padding-left: 75px"></i>
+                </li>
+                <li class="fa fa-plus float-right wbdv-module-item-add-btn"
+                    style="color: white; padding-top: 10px"></li>
+
+            </ul>
+
+        </div>
+
+        <div class="col-5" style="padding-left: 10px">
+
+            <ul class="nav nav-pills wbdv-topic-pill-list" style="padding-top: 10px">
+                <li class="nav-item wbdv-topic-pill">
+                    <label class="nav-link active bg-dark" href="#">Topic 1</label>
+                </li>
+                <li class="nav-item">
+                    <label class="nav-link" href="#">Topic 2</label>
+                </li>
+                <li class="nav-item">
+                    <label class="nav-link" href="#">Topic 3</label>
+                </li>
+                <li class="nav-item">
+                    <label class="nav-link" href="#">Topic 4</label>
+                </li>
+                <li class="nav-link fa fa-plus wbdv-topic-add-btn"></li>
+            </ul>
+
+        </div>
+
+
+    </div>
+
+</div>
 
 </body>
 </html>

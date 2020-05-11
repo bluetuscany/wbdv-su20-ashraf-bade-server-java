@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Courses Page</title>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+          rel="stylesheet"/>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="course-list.style.client.css" rel="stylesheet"/>
+    <link href="../landing_page/style.css" rel="stylesheet"/>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="row" id="navBar">
+        <nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark">
+            <a class="navbar-brand" href="../profile_page/profile-page.template.client.html">WhiteBoard</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="true" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse wbdv-field wbdv-hamburger" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="../profile_page/profile-page.template.client.html">My Profile
+                        <span
+                                class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link active" href="../course_list/course-list.template.client.html">My
+                        Courses</a>
+                    <a class="nav-item nav-link" href="../course_editor_page/course-editor.template.client.html">Course
+                        Editor</a>
+
+                    <div id="search" class="input-group">
+                        <input id="searchBar" type="search" class="form-control wbdv-field wbdv-new-course"
+                               placeholder="Course Title">
+                        <div class="input-group-append-sm">
+                            <button class="btn btn-outline-light wbdv-button wbdv-add-course" id="button-addon2">Add
+                                Course
+                            </button>
+                        </div>
+                    </div>
+
+
+                    <a id="logout" class="nav-item nav-link active"
+                       href="../landing_page/index.html">Logout</a>
+                </div>
+            </div>
+
+        </nav>
+    </div>
+
+    <table class="table table-striped">
+
+
+        <thead>
+        <tr class="table-borderless">
+            <th class="h3 wbdv-header wbdv-title">Course Title</th>
+            <th class="h3 wbdv-header wbdv-owner">Instructor</th>
+            <th class="h3 wbdv-header wbdv-last-modified">Last Modified</th>
+            <th class="h3">
+                <i class="fa fa-sort-alpha-asc wbdv-header wbdv-sort"></i>
+                <i class="fa fa-th wbdv-button wbdv-grid-layout"></i>
+            </th>
+        </tr>
+        </thead>
+
+
+        <tbody>
+
+        <tr class="wbdv-row wbdv-course">
+            <td class="wbdv-row wbdv-icon">
+                <i class="fa fa-file wbdv-row wbdv-icon"></i>
+                CS 4550
+            </td>
+            <td class="wbdv-row wbdv-owner">Ashraf Bade</td>
+            <td class="wbdv-row wbdv-modified-date">3 hours ago</td>
+            <td>
+                <button class="float-right btn btn-outline-dark btn-lg">
+                    <i class="fa fa-trash wbdv-row wbdv-button wbdv-delete"></i>
+                </button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <i class="fa fa-file"></i>
+                CS 3000
+            </td>
+            <td>Ashraf Bade</td>
+            <td>3 weeks ago</td>
+            <td>
+                <button class="float-right btn btn-outline-dark btn-lg">
+                    <i class="fa fa-trash"></i>
+                </button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <i class="fa fa-file"></i>
+                CS 3500
+            </td>
+            <td>Ashraf Bade</td>
+            <td>3 weeks ago</td>
+            <td>
+                <button class="float-right btn btn-outline-dark btn-lg">
+                    <i class="fa fa-trash"></i>
+                </button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <i class="fa fa-file"></i>
+                CS 3200
+            </td>
+            <td>Ashraf Bade</td>
+            <td>2 years ago</td>
+            <td>
+                <button class="float-right btn btn-outline-dark btn-lg">
+                    <i class="fa fa-trash"></i>
+                </button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <i class="fa fa-file"></i>
+                ACCT 1201
+            </td>
+            <td>Ashraf Bade</td>
+            <td>2 years ago</td>
+            <td>
+                <button class="float-right btn btn-outline-dark btn-lg">
+                    <i class="fa fa-trash"></i>
+                </button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <i class="fa fa-file"></i>
+                WMNS 1400
+            </td>
+            <td>Ashraf Bade</td>
+            <td>3 years ago</td>
+            <td>
+                <button class="float-right btn btn-outline-dark btn-lg">
+                    <i class="fa fa-trash"></i>
+                </button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <i class="fa fa-file"></i>
+                HIST 2200
+            </td>
+            <td>Ashraf Bade</td>
+            <td>3 years ago</td>
+            <td>
+                <button class="float-right btn btn-outline-dark btn-lg">
+                    <i class="fa fa-trash"></i>
+                </button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <i class="fa fa-file"></i>
+                CTLR 2300
+            </td>
+            <td>Ashraf Bade</td>
+            <td>4 years ago</td>
+            <td>
+                <button class="float-right btn btn-outline-dark btn-lg">
+                    <i class="fa fa-trash"></i>
+                </button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <i class="fa fa-file"></i>
+                CS 1200
+            </td>
+            <td>Ashraf Bade</td>
+            <td>4 years ago</td>
+            <td>
+                <button class="float-right btn btn-outline-dark btn-lg">
+                    <i class="fa fa-trash"></i>
+                </button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <i class="fa fa-file"></i>
+                IS 2000
+            </td>
+            <td>Ashraf Bade</td>
+            <td>4 years ago</td>
+            <td>
+                <button class="float-right btn btn-outline-dark btn-lg">
+                    <i class="fa fa-trash"></i>
+                </button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <i class="fa fa-file"></i>
+                CS 1800
+            </td>
+            <td>Ashraf Bade</td>
+            <td>4 years ago</td>
+            <td>
+                <button class="float-right btn btn-outline-dark btn-lg">
+                    <i class="fa fa-trash"></i>
+                </button>
+            </td>
+        </tr>
+
+
+        </tbody>
+
+
+        <tfoot>
+        </tfoot>
+
+    </table>
+
+</div>
+
+</body>
+</html>

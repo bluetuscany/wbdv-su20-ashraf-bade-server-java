@@ -1,16 +1,42 @@
 #title_text {
+    padding-top: 100px;
     text-align: center;
 }
 
 #sign_up_form {
+    padding-top: 75px;
+}
+
+#links {
+    padding-top: 35px;
+}
+
+#uname {
+    background: transparent;
+    border: 1px solid black;
+}
+
+#email {
+    background: transparent;
+    border: 1px solid black;
+}
+
+#inputPassword {
+    background: transparent;
+    border: 1px solid black;
+
+}
+
+#confirmPass {
+    background: transparent;
+    border: 1px solid black;
+
+}
+
+#home_button {
     align-items: center;
-    padding-top: 150px;
 }
 
-#username_input {
-    padding-right: 150px;
-}
-
-#email_address_input {
-    padding-right: 500px;
+#login_redirect {
+    color: white;
 }

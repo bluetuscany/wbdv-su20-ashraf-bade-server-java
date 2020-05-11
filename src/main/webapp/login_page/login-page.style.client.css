@@ -1,0 +1,27 @@
+#sign_up_redirect {
+    color: white;
+}
+
+#navBar {
+    padding-bottom: 150px;
+}
+
+#welcomeBack_message {
+    padding-top: 50px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+#links {
+    padding-top: 30px;
+}
+
+#uname {
+    background: transparent;
+    border: 1px solid black;
+}
+
+#inputPassword {
+    background: transparent;
+    border: 1px solid black;
+}

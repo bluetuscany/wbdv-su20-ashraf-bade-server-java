@@ -1,0 +1,69 @@
+#logout {
+    color: red;
+    padding-left: 1400px;
+}
+
+#navBar {
+    padding-bottom: 150px;
+}
+
+#your-profile {
+    text-align: center;
+}
+
+#cards {
+
+}
+
+#card1 {
+
+}
+
+#user-pic {
+    size: 100px;
+    align-items: center;
+}
+
+#profile {
+    padding-bottom: 30px;
+}
+
+#inputEmail4 {
+    background: transparent;
+    border: 1px solid black;
+}
+
+#phone-number {
+    background: transparent;
+    border: 1px solid black;
+}
+
+#birth-date {
+    background: transparent;
+    border: 1px solid black;
+}
+
+#inputAddress {
+    background: transparent;
+    border: 1px solid black;
+}
+
+#inputCity {
+    background: transparent;
+    border: 1px solid black;
+}
+
+#inputState {
+    background: transparent;
+    border: 1px solid black;
+}
+
+#inputZip {
+    background: transparent;
+    border: 1px solid black;
+}
+
+#role {
+    background: transparent;
+    border: 1px solid black;
+}

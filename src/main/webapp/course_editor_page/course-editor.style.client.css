@@ -1,0 +1,13 @@
+#navBar {
+    padding-bottom: 50px;
+}
+
+label {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#logout {
+    color: red;
+    padding-left: 1400px;
+}
