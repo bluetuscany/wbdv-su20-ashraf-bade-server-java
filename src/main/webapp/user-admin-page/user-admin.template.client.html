@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="eng">
 <head>
     <meta charset="UTF-8">
     <title>User Admin Page</title>
@@ -7,69 +7,99 @@
             "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
     <link rel="stylesheet" href=
             "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
-    <link href="user-admin.style.client.css" rel="stylesheet" />
+    <link href="user-admin.style.client.css" rel="stylesheet"/>
     <link href="../style.css" rel="stylesheet">
+
+    <script src="../user-services/user.service.client.js"></script>
     <script
             src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="../services/user.service.client.js"></script>
+
     <script src="user-admin.controller.client.js"></script>
     <script src="user.model.client.js"></script>
-    <script src="user.service.client.js"></script>
-    <script src="user-admin.controller.client.js"></script>
 
 </head>
 <body>
 
 <div class="container">
 
-<table class="table">
-    <thead>
-    <tr>
-        <th>Username</th>
-        <th>Password</th>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Role</th>
-        <th>&nbsp;</th>
-    </tr>
+    <div class="row" id="navBar">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="profile-page.template.client.html">WhiteBoard</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="../profile_page/profile-page.template.client.html">My Profile <span
+                            class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="../course_list/course-list.template.client.html">My Courses</a>
+                    <a class="nav-item nav-link" href="../course_editor_page/course-editor.template.client.html">Course
+                        Editor</a>
+                    <a class="nav-item nav-link active" href="../user-admin-page/user-admin.template.client.html">
+                        User Admin
+                    </a>
+                    <a id="logout" class="nav-item nav-link active wbdv-button wbdv-logout"
+                       href="../landing_page/index.html">Logout</a>
+                </div>
+            </div>
 
-    <tr class="wbdv-form">
-        <td><input id="usernameFld" class="form-control"
-                   placeholder="Username" /></td>
-        <td><input id="passwordFld" class="form-control"
-                   placeholder="Password" /></td>
-        <td><input id="firstNameFld" class="form-control"
-                   placeholder="First Name" /></td>
-        <td><input id="lastNameFld" class="form-control"
-                   placeholder="Last Name" /></td>
-        <td><select id="roleFld" class="form-control">
-            <option value="FACULTY">Faculty</option>
-            <option value="STUDENT">Student</option>
-            <option value="ADMIN">Admin</option>
-        </select></td>
-        <td><span class="float-right" style="white-space: nowrap">
-      <i class="fa-2x fa fa-search wbdv-search"></i> <i
-                class="fa-2x fa fa-plus wbdv-create"></i> <i
-                class="fa-2x fa fa-check wbdv-update"></i>
+        </nav>
+    </div>
+
+    <div class="row">
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Username</th>
+                <th>Password</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Role</th>
+                <th>&nbsp;</th>
+            </tr>
+
+            <tr class="wbdv-form">
+                <td><input id="usernameFld" class="form-control"
+                           placeholder="Username"/></td>
+                <td><input id="passwordFld" type="password" class="form-control"
+                           placeholder="Password"/></td>
+                <td><input id="firstNameFld" class="form-control"
+                           placeholder="First Name"/></td>
+                <td><input id="lastNameFld" class="form-control"
+                           placeholder="Last Name"/></td>
+                <td><select id="roleFld" class="form-control">
+                    <option value="FACULTY">Faculty</option>
+                    <option value="STUDENT">Student</option>
+                    <option value="ADMIN">Admin</option>
+                </select></td>
+                <td><span class="float-right" style="white-space: nowrap">
+      <button class="fa-2x fa fa-search wbdv-search"></button>
+                    <button
+                        class="fa-2x fa fa-plus wbdv-create"></button> <button
+                        class="fa-2x fa fa-check wbdv-update"></button>
   </span></td>
-    </tr>
+            </tr>
 
-    <tbody class="wbdv-tbody">
-    <tr class="wbdv-template wbdv-user wbdv-hidden">
-        <td class="wbdv-username">ada</td>
-        <td>&nbsp;</td>
-        <td class="wbdv-first-name">Ada</td>
-        <td class="wbdv-last-name">Lovelace</td>
-        <td class="wbdv-role">FACULTY</td>
-        <td class="wbdv-actions">
+            <tbody class="wbdv-tbody">
+            <tr class="wbdv-template wbdv-user wbdv-hidden wbdv-row-template">
+                <td class="wbdv-username">jSmith123</td>
+                <td class="wbdv-password">*****</td>
+                <td class="wbdv-first-name">John</td>
+                <td class="wbdv-last-name">Smith</td>
+                <td class="wbdv-role">FACULTY</td>
+                <td class="wbdv-actions">
         <span class="float-right">
-          <i id="wbdv-remove" class="fa-2x fa fa-times wbdv-remove"></i>
-          <i id="wbdv-edit" class="fa-2x fa fa-pencil wbdv-edit"></i>
+          <button id="wbdv-delete" class="fa-2x fa fa-times wbdv-remove"></button>
+          <button id="wbdv-edit" class="fa-2x fa fa-pencil wbdv-edit"></button>
         </span>
-        </td>
-    </tr>
-    </tbody>
-</table>
+                </td>
+            </tr>
+            </tbody>
+        </table>
 
+    </div>
 </div>
 </body>
+</html>

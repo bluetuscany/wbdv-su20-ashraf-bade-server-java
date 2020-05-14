@@ -14,3 +14,13 @@ body {
 #sign_up_button {
     padding-top: 30px;
 }
+
+td {
+    font-size: 20px;
+    font-family: Bahnschrift, serif;
+}
+
+th {
+    font-size: 27px;
+    font-family: Bahnschrift, sans-serif;
+}
