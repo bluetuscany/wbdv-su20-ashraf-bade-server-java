@@ -10,12 +10,12 @@
     <link href="user-admin.style.client.css" rel="stylesheet"/>
     <link href="../style.css" rel="stylesheet">
 
-    <script src="../user-services/user.service.client.js"></script>
+    <script src="../services/user.service.client.js"></script>
     <script
             src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-    <script src="user-admin.controller.client.js"></script>
-    <script src="user.model.client.js"></script>
+    <script src="../user-admin-page/user-admin.controller.client.js"></script>
+    <script src="../models/user.model.client.js"></script>
 
 </head>
 <body>
@@ -24,7 +24,7 @@
 
     <div class="row" id="navBar">
         <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="profile-page.template.client.html">WhiteBoard</a>
+            <a class="navbar-brand" href="../profile_page/profile-page.template.client.html">WhiteBoard</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
                     aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -61,15 +61,15 @@
             </tr>
 
             <tr class="wbdv-form">
-                <td><input id="usernameFld" class="form-control"
+                <td><input id="usernameFld" class="form-control wbdv-usernameFld"
                            placeholder="Username"/></td>
-                <td><input id="passwordFld" type="password" class="form-control"
+                <td><input id="passwordFld" type="password" class="form-control wbdv-passwordFld"
                            placeholder="Password"/></td>
-                <td><input id="firstNameFld" class="form-control"
+                <td><input id="firstNameFld" class="form-control wbdv-fnameFld"
                            placeholder="First Name"/></td>
-                <td><input id="lastNameFld" class="form-control"
+                <td><input id="lastNameFld" class="form-control wbdv-lnameFld"
                            placeholder="Last Name"/></td>
-                <td><select id="roleFld" class="form-control">
+                <td><select id="roleFld" class="form-control wbdv-role">
                     <option value="FACULTY">Faculty</option>
                     <option value="STUDENT">Student</option>
                     <option value="ADMIN">Admin</option>
@@ -83,7 +83,7 @@
             </tr>
 
             <tbody class="wbdv-tbody">
-            <tr class="wbdv-template wbdv-user wbdv-hidden wbdv-row-template">
+            <tr class="wbdv-template wbdv-user wbdv-hidden wbdv-user-row-template">
                 <td class="wbdv-username">jSmith123</td>
                 <td class="wbdv-password">*****</td>
                 <td class="wbdv-first-name">John</td>
@@ -91,8 +91,8 @@
                 <td class="wbdv-role">FACULTY</td>
                 <td class="wbdv-actions">
         <span class="float-right">
-          <button id="wbdv-delete" class="fa-2x fa fa-times wbdv-remove"></button>
-          <button id="wbdv-edit" class="fa-2x fa fa-pencil wbdv-edit"></button>
+          <button class="fa-2x fa fa-times wbdv-remove"></button>
+          <button class="fa-2x fa fa-pencil wbdv-edit"></button>
         </span>
                 </td>
             </tr>

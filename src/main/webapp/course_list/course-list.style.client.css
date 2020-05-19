@@ -1,6 +1,5 @@
 #logout {
     color: red;
-    padding-left: 580px;
 }
 
 #navBar {
@@ -13,10 +12,9 @@ td {
 }
 
 #search {
-    padding-left: 500px;
-    padding-top: 20px;
+
 }
 
 #searchBar {
-    background-color: #f5e5de;
+    background-color: white;
 }

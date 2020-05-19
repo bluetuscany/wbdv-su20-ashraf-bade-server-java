@@ -4,8 +4,9 @@ function AdminUserServiceClient() {
     this.findUserById = findUserById;
     this.deleteUser = deleteUser;
     this.updateUser = updateUser;
+    this.findUserById = findUserById;
     this.url = 'https://wbdv-generic-server.herokuapp.com/api/abade/users';
-    const self = this;
+    let self = this;
 
     function createUser(user) {
         const userString = JSON.stringify(user)
@@ -51,9 +52,18 @@ function AdminUserServiceClient() {
 
     function deleteUser(userId) {
         return fetch(self.url + '/' + userId, {
-        method: 'DELETE'
+        method: 'DELETE',
     })
         .then(function(response) {
+            return response.json()
+        })
+    }
+
+    function findUserById(userId) {
+
+        return fetch(self.url + '/' + userId, {
+            method: 'GET'
+        }).then(function (response) {
             return response.json()
         })
     }
