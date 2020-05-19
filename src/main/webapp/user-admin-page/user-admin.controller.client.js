@@ -64,7 +64,6 @@
                 '</tr>')
             $tbody.append(newUserRow)
         }
-        findAllUsers()
     }
 
     function createUser() {
@@ -99,23 +98,11 @@
             })
     }
 
-    function findUserById(event) {
-        const target = event.currentTarget
-        const $button = $(target)
-        const userId = $button.attr('id')
-        userService.findUserById(userId).then(function () {
-            users = users.filter(function (user) {
-                return user._id === userId
-            })
-            renderAllUsers()
-        })
-    }
 
     function deleteUser(event) {
         const target = event.currentTarget
         const $button = $(target)
         const userId = $button.attr('id')
-        alert('delete user ' + userId)
         userService.deleteUser(userId)
             .then(function () {
                 users = users.filter(function (user) {
@@ -123,6 +110,7 @@
                 })
                 renderAllUsers()
             })
+
     }
 
     function selectUser(event) {
@@ -131,7 +119,7 @@
         const userId = $button.attr('id')
         userService.findUserById(userId)
             .then(function (user) {
-                console.log(user)
+                // console.log(user)
                 renderUser(user)
             })
     }
@@ -153,6 +141,7 @@
                         return user
                     }
                 })
+                renderAllUsers()
             })
     }
 
@@ -165,6 +154,7 @@
     }
 
     function renderAllUsers() {
+
         const template = $('.wbdv-user-row-template')[0]
         const $template = $(template)
         const clone = $template.clone()
