@@ -3,13 +3,12 @@
 
     let $usernameFld, $passwordFld, $fnameFld, $lnameFld, $roleFld;
     let $removeBtn, $editBtn, $createBtn, $updateBtn;
-    let $userRowTemplate, $tbody;
+    let $tbody;
     const userService = new AdminUserServiceClient();
     let selectedUser = {}
 
     function main() {
         $tbody = $('tbody')
-        $userRowTemplate = $('.wbdv-row-template')
 
         $createBtn = $('.wbdv-create')
         $updateBtn = $('.wbdv-update')
@@ -177,6 +176,7 @@
             copy.find('.wbdv-edit')
                 .attr('id', user._id)
                 .click(selectUser)
+
             $tbody.append(copy)
         }
     }
