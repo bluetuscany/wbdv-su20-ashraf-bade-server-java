@@ -1,5 +1,4 @@
 package com.example.demo.models;
-
 import javax.persistence.*;
 import java.util.List;
 
